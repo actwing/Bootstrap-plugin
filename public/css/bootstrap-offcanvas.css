@@ -1,0 +1,38 @@
+.offcanvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  z-index: 1050;
+  width: 270px;
+  max-width: 100%;
+//  background: #333;
+  background: #eee;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  -ms-scroll-chaining: none;
+}
+.offcanvas.offcanvas-flip {
+  left: auto;
+  right: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.offcanvas.active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+body {
+  -webkit-transition: -webkit-margin .3s ease-in-out;
+  transition: margin .3s ease-in-out;
+}
+body.offcanvas-open {
+  margin-left: 270px;
+}
+body.offcanvas-flip-open {
+  padding-right: 270px;
+}
